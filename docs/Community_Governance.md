@@ -28,7 +28,15 @@ You can see the current list of supported boards and their maintainers <a href="
 | IRC, Discord                 | @Werner         |                                                          |                     |                 |
 
 ## Community Governance Charters and Documentation
-<b>Coming soon!</b>
+The Armbian Project is an open source community.
+
+This commmunity develops a lightweight Linux operating system, optimized for ARM development boards.
+
+The project operates according to its own set of rules and procedures, which govern its organizational structure and decision-making processes.
+
+These rules and procedures may not be explicitly defined or documented, but the project has various roles such as Board Maintainers, Platform Maintainers, Release Management, Testing and Code Quality, Security, Documentation, Community Engagement, Legal and Financial, Web and Infrastructure, Forums moderation, and IRC/Discord to help ensure smooth operation.
+
+The Armbian community is currently working on developing Community Governance Charters and Documentation to further define its governance structure.
 
 ## Hackers Emeritus
 
