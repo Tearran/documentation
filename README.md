@@ -42,19 +42,53 @@ Current Parent Topics:
 
 See the [document template](.github/DOCUMENT_TEMPLATE.md) before you writing any content.
 
+---
 ## Working on the content
+### Prerequisites
+
+**Ensure Python and the necessary development packages are installed**. For Debian-based systems:
+
+```bash
+sudo apt-get update
+sudo apt-get install python3 python3-pip python3-venv python3.11-dev
+```
+
+### Environment Setup and Repository Cloning
+
+**Set up a Python virtual environment** to isolate project dependencies. This example uses a directory within the current user's home directory, but you can adjust the path as needed:
+
+```bash
+python3 -m venv ~/armbian-docs-env
+source ~/armbian-docs-env/bin/activate
+```
+
+Alternatively, for a project-specific environment, replace `~/armbian-docs-env` with `./env` or another directory within your project's folder.
+
+**Clone the Armbian documentation** repository and navigate into it:
 
 ```bash
 git clone https://github.com/armbian/documentation
+cd documentation
+```
+
+**Install the required Python packages** from the `requirements.txt` file:
+
+```bash
 pip install -r requirements.txt
+```
+
+## Building and Serving the Documentation
+
+To build and serve the documentation locally, allowing you to make edits and observe the results in real time, use:
+
+```bash
 mkdocs build --clean && mkdocs serve
 ```
 
-You will be able to make edits to existing files and observe the results in real time.
+This command builds the documentation and starts a local server. You can view the documentation by visiting `http://127.0.0.1:8000` in your web browser.
 
-After changing text in an existing file, use this command to rebuild and view the documentation:
-
-`mkdocs build --clean && mkdocs serve`
+- **For editing existing files:** After making changes, the `mkdocs serve` command automatically rebuilds the documentation. Simply refresh your browser to see the updates.
+- **For adding new files:** Ensure the new files are referenced in the `mkdocs.yml` configuration file under the `nav` section. The server automatically incorporates changes, so just refresh your browser to view them.
 
 After adding a new file, either hand-edit `mkdocs.yml`, or re-run `tools/mkArmbianDocs.py` **unless making changes to the structure of the `docs/` folder**. (See below)
 
